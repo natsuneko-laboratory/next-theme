@@ -16,8 +16,14 @@ export const setTheme = async (theme: Theme) => {
   });
 };
 
-export const getTheme = async (initial: Theme) => {
+export const getTheme = async (initial: Theme): Promise<Theme> => {
   const theme = cookies().get("theme")?.value;
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  return (theme as any as Theme | undefined) ?? initial;
+  if (theme) {
+    if (ACCEPT_VALUES.includes(theme)) {
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      return theme as any as Theme;
+    }
+  }
+
+  return initial;
 };
