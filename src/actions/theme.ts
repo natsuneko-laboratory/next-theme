@@ -3,7 +3,13 @@
 import { cookies } from "next/headers";
 import type { Theme } from "../hooks/useBrowserTheme";
 
+const ACCEPT_VALUES = ["light", "dark"];
+
 export const setTheme = async (theme: Theme) => {
+  if (!ACCEPT_VALUES.includes(theme)) {
+    return;
+  }
+
   cookies().set("theme", theme, {
     httpOnly: true,
     sameSite: "lax",
