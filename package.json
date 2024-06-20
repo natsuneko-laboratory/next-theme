@@ -1,6 +1,6 @@
 {
   "name": "@natsuneko-laboratory/next-theme",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Integrate custom theme feature into your Next.js project.",
   "type": "module",
   "main": "dist/index.cjs.cjs",
