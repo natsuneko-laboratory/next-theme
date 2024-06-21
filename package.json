@@ -46,14 +46,12 @@
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
     "@natsuneko-laboratory/kiana": "^1.1.0",
+    "@natsuneko-laboratory/vite-plugin-next-directives": "^0.1.0",
     "@types/node": "^20.14.6",
     "@types/react": "^18.3.3",
     "@vitejs/plugin-react": "^4.3.1",
-    "fast-glob": "^3.3.2",
     "next": "15.0.0-rc.0",
-    "normalize-path": "^3.0.0",
     "react": "^18.3.1",
-    "rollup": "^4.18.0",
     "typescript": "^5.4.5",
     "vite": "^5.3.1",
     "vitest": "^1.6.0"
